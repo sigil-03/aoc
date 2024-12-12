@@ -1,6 +1,11 @@
 module ListSort (sort) where
 
+import qualified ListMerge (merge)
+
 sort :: [Integer] -> [Integer]
-sort [x, y] = if x > y
-		then [y, x]
-		else [x, y]
+-- base cases
+sort [x] = [x]
+sort [x, y] = ListMerge.merge [x] [y]
+
+-- recursive case -- need to merge here
+sort (x:xs) = ListMerge.merge [x] (sort xs)

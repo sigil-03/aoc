@@ -61,7 +61,7 @@ library
     exposed-modules:  ListSort
 
     -- Modules included in this library but not exported.
-    -- other-modules:
+    other-modules: ListMerge
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
